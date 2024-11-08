@@ -1,6 +1,6 @@
 # character
 
-A Go package for parsing character cards in PNG format.
+A Go package for parsing character cards in PNG format, inspired and more or less transpiled using AI from https://github.com/OpenRouterTeam/character
 
 ## Installation
 
@@ -35,7 +35,6 @@ func main() {
     // Access character information
     fmt.Printf("Name: %s\n", char.Name())
     fmt.Printf("Description: %s\n", char.Description())
-    fmt.Printf("Avatar (base64): %s\n", char.Avatar())
 }
 ```
 
