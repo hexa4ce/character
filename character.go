@@ -12,16 +12,10 @@ import (
 
 // Common errors
 var (
-	ErrNotPNG = errors.New("not a PNG file")
-	ErrNoCharacterData = errors.New("no character data found in PNG")
-	ErrIncompletePNGChunk = errors.New("incomplete PNG chunk")
+	ErrNotPNG               = errors.New("not a PNG file")
+	ErrNoCharacterData      = errors.New("no character data found in PNG")
+	ErrIncompletePNGChunk   = errors.New("incomplete PNG chunk")
 	ErrIncompletePNGChunkData = errors.New("incomplete PNG chunk data")
-	"bytes"
-	"encoding/base64"
-	"encoding/binary"
-	"encoding/json"
-	"errors"
-	"fmt"
 )
 
 // CharacterMetadata contains all the metadata fields for a character
