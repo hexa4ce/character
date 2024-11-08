@@ -87,7 +87,7 @@ type pngChunk struct {
 func FromFile(data []byte) (*Character, error) {
 	// Check PNG signature
 	if len(data) < 8 || !bytes.Equal(data[:8], []byte{137, 80, 78, 71, 13, 10, 26, 10}) {
-		return nil, errors.New("not a PNG file")
+		return nil, ErrNotPNG
 	}
 
 	// Parse PNG chunks
