@@ -1,3 +1,4 @@
+// Package character provides functionality for parsing character cards stored in PNG format
 package character
 
 import (
@@ -9,6 +10,21 @@ import (
 	"fmt"
 )
 
+// Common errors
+var (
+	ErrNotPNG = errors.New("not a PNG file")
+	ErrNoCharacterData = errors.New("no character data found in PNG")
+	ErrIncompletePNGChunk = errors.New("incomplete PNG chunk")
+	ErrIncompletePNGChunkData = errors.New("incomplete PNG chunk data")
+	"bytes"
+	"encoding/base64"
+	"encoding/binary"
+	"encoding/json"
+	"errors"
+	"fmt"
+)
+
+// CharacterMetadata contains all the metadata fields for a character
 type CharacterMetadata struct {
 	AlternateGreetings []interface{} `json:"alternate_greetings"`
 	Avatar             string        `json:"avatar"`
