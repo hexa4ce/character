@@ -22,5 +22,4 @@ func Example() {
 	// Access character information
 	fmt.Printf("Name: %s\n", char.Name())
 	fmt.Printf("Has description: %v\n", char.Description() != "")
-	fmt.Printf("Has avatar: %v\n", char.Avatar() != "")
 }
